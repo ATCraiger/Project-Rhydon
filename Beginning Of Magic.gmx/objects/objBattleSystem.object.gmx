@@ -44,28 +44,6 @@ sentBy = undefined; //Who lauched the attack
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//////COMBAT TEST ONLY/////
-beatMonster = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="2" enumb="0">
       <action>
@@ -366,48 +344,6 @@ if(playerParty[1].isFighting) {
             
         gamepad_set_vibration(0,0,0);
         playerParty[1].currentStamina -= playerParty[1].attackCost;
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>////When battle is over TESTING
-if(!instance_exists(objEnemyParent) &amp;&amp; beatMonster) {
-    show_message("Thanks for play testing! I hope you enjoyed it. Please give me your feedback");
-    game_end();
-}
-
-if(beatMonster == false &amp;&amp; !instance_exists(objEnemyParent) ) {
-    playerParty[0].x = 400;
-    playerParty[0].y = 400;
-    playerParty[1].x = 400;
-    playerParty[1].y = 500;
-    show_message("Now, you can see the hit boxes. Red for crits, blue for hit, pink for miss");
-    instance_create(700, 700, objTestEnemy);
-    beatMonster = true;
-}
-
-if(beatMonster) {
-    for(i = 0; i &lt; instance_number(objMonsterHitBox); ++i) {
-        box = instance_find(objMonsterHitBox, i);
-        box.visible = true;
     }
 }
 </string>

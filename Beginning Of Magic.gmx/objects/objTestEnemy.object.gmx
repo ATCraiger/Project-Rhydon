@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>///Setting up variables
 event_inherited();
-if(image_xscale == 1)
-    image_xscale = -1
 currentHealth = 20;
 name = "Beast";
 moveSpeed = 1.5;
@@ -212,6 +210,7 @@ speed = moveSpeed;
           <argument>
             <kind>1</kind>
             <string>///Enemy AI
+event_inherited();
 //Hit Grid
 if(speed != 0) {
     scrDestroyHitBoxes();
@@ -254,10 +253,6 @@ if(alarm[0] &lt; 300) {
     speed = 0.5;
 }
 
-///DEATH SEQUENCE
-if(currentHealth &lt;= 0) {
-    instance_destroy();
-}
 </string>
           </argument>
         </arguments>
